@@ -49,7 +49,10 @@ public class SecFunctionCall extends Section {
 
     @Override
     public String toString(@Nullable Event e, boolean debug) {
-        return "";
+        if (functionToExecute == null) {
+            return "execute function section";
+        }
+        return "execute function " + functionToExecute.getName();
     }
 
     @Override
